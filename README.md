@@ -1,7 +1,12 @@
 # NeonVectorShooter_GL
 NeonVectorShooter adapted to MonoGame 3.8 using an OpenGL MonoGame Project Template
 
-Make a Neon Vector Shooter work in MonoGame
+#Properties"
+* MonoGame 3.8 
+* MonoGame GL Project Template
+* Visual Studio 2019
+
+A complete working MonoGame Windows version of Neon Vector Shooter.
 
 Introduction to game development using MonoGame sample program based on the tutorials from Michel Hoffman as provided in the his detailed tutorials "Cross-Platform Vector Shooter: XNA" in the following web site: https://gamedevelopment.tutsplus.com/series/cross-platform-vector-shooter-xna--gamedev-10559
 
