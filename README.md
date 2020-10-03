@@ -1,7 +1,7 @@
 # NeonVectorShooter_GL
 NeonVectorShooter adapted to MonoGame 3.8 using an OpenGL MonoGame Project Template
 
-#Properties"
+#Properties
 * MonoGame 3.8 
 * MonoGame GL Project Template
 * Visual Studio 2019
