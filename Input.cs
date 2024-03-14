@@ -3,8 +3,6 @@
 // Find the full tutorial at: http://gamedev.tutsplus.com/series/vector-shooter-xna/
 //----------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
