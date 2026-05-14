@@ -1,0 +1,15 @@
+<Project>
+  <!--
+    MonoGame's MGCB invokes MGFXC for .fx on Linux, which expects Wine + d3dcompiler_47.
+    MGFXC_WINE_PATH must be the Wine prefix directory (same as WINEPREFIX).
+    Set MGFXC_WINE_PATH in the environment to override; otherwise we default under the user's home.
+  -->
+  <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+    <_DefaultMGFXCWinePrefix>$([System.Environment]::GetEnvironmentVariable('HOME'))/.winemonogame</_DefaultMGFXCWinePrefix>
+    <_HomeLocalBin>$([System.Environment]::GetEnvironmentVariable('HOME'))/.local/bin</_HomeLocalBin>
+    <_PathEnv>$([System.Environment]::GetEnvironmentVariable('PATH'))</_PathEnv>
+    <MGFXC_WINE_PATH Condition="'$(MGFXC_WINE_PATH)' == ''">$(_DefaultMGFXCWinePrefix)</MGFXC_WINE_PATH>
+    <!-- Prepend ~/.local/bin so MGFXC finds wine64 (IDE builds often skip ~/.bashrc). -->
+    <DotnetCommand>env "MGFXC_WINE_PATH=$(MGFXC_WINE_PATH)" PATH="$(_HomeLocalBin):$(_PathEnv)" dotnet</DotnetCommand>
+  </PropertyGroup>
+</Project>
