@@ -77,7 +77,7 @@ Example (Debian / Ubuntu):
 
 ```bash
 sudo apt update
-sudo apt install -y wine64 p7zip-full wget
+sudo apt install -y wine64 winetricks p7zip-full wget
 ```
 
 If your distro splits Wine differently, ensure a working **64-bit Wine** and that **`wine64`** resolves to the real loader (see repository `scripts/setup-mgfxc-wine.sh`).
